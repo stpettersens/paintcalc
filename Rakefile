@@ -2,11 +2,11 @@ require 'os'
 require 'fileutils'
 
 ant = "ant"
+test = "test/test.rb"
 
 if OS.windows? then
-	Dir.chdir("cli")
 	ant = "cmd /c ant.bat"
-	Dir.chdir("..")
+	test = "test\\test.rb"
 end
 
 task :default => [:cli] do
@@ -28,4 +28,8 @@ task :clean do
 	File.delete("cli/paintcalc.jar")
 	FileUtils.rm_r("gui/ant_build")
 	File.delete("gui/paintcalc.jar")
+end
+
+task :test do
+	ruby "#{test}"
 end

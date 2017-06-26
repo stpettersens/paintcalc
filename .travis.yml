@@ -14,4 +14,4 @@ before_install:
 
 script:
   - rake
-  # - rake test
+  - rake test
