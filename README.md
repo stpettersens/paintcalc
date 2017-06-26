@@ -7,7 +7,7 @@
 
 ##### Requirements
 
-The following tools are required to build the program. Please note these versions are known to work, earlier versions might work too.
+The following tools are required to build the programs. Please note these versions are known to work, earlier versions might work too.
 
 * [Java Development Kit](http://java.sun.com) 1.8+
 * [Ant](https://ant.apache.org) 1.8+
