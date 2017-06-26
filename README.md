@@ -13,7 +13,7 @@ The following tools are required to build the program. Please note these version
 * [Ant](https://ant.apache.org) 1.8+
 * [Ruby](https://www.ruby-lang.org/en) 2.2+ and [Rake](https://ruby.github.io/rake) 10+
 
-Ruby is required to run the `:tests` task in the top level
+Ruby is required to run the `:test` task in the top level
 buildfile (i.e. `Rakefile`). It is not strictly necessary to compile and run the programs or run the unit tests. 
 
 [JRuby](http://jruby.org) and its Rake implementation will work for the default task to compile the programs, but will not work for the `:tests` task.
