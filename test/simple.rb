@@ -2,8 +2,8 @@ require 'open3'
 require 'os'
 
 if OS.java? then
-	puts "Please do not use JRuby for this."
-	exit 1
+    puts "Please do not use JRuby for this."
+    exit 1
 end
 
 Dir.chdir("cli")
