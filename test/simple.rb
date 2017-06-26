@@ -1,4 +1,10 @@
 require 'open3'
+require 'os'
+
+if OS.java? then
+	puts "Please do not use JRuby for this."
+	exit 1
+end
 
 Dir.chdir("cli")
 puts "Invoking java -jar paintcalc.jar"
