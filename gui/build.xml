@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="paintcalc" default="package">
+	<target name="init">
+		<property name="src.dir" location="${basedir}/src/io/stpettersens/paintcalc"/>
+        <property name="build.dir" location="${basedir}/ant_build"/>
+		<property name="jar" location="${basedir}/paintcalc.jar"/>
+		<property name="manifest" location="${basedir}/Manifest.mf"/>
+	</target>
+	
+	<target name="compile" depends="init">
+        <mkdir dir="${build.dir}"/>
+		<javac includeantruntime="false" srcdir="${src.dir}" destdir="${build.dir}"/>
+	</target>
+    <target name="package" depends="compile">
+		<jar manifest="${manifest}" destfile="${jar}">
+			<fileset dir="${build.dir}"/>
+		</jar>
+    </target>
+</project>
