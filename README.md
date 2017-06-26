@@ -16,7 +16,7 @@ The following tools are required to build the programs. Please note these versio
 Ruby is required to run the `:test` task in the top level
 buildfile (i.e. `Rakefile`). It is not strictly necessary to compile and run the programs or run the unit tests. 
 
-[JRuby](http://jruby.org) and its Rake implementation will work for the default task to compile the programs, but will not work for the `:tests` task.
+[JRuby](http://jruby.org) and its Rake implementation will work for the default task to compile the programs, but will not work for the `:test` task.
 
 ##### Build
 
