@@ -14,22 +14,24 @@ The following tools are required to build the program. Please note these version
 * [Ruby](https://www.ruby-lang.org/en) 2.2+ and [Rake](https://ruby.github.io/rake)
 
 Ruby is required to run the `:tests` task in the top level
-buildfile (i.e. `Rakefile`). It is not strictly necessary to compile and run the programs or run the unit tests. [JRuby](http://jruby.org) and its Rake implementation will work for the default task to compile the programs, but will not work for the `:tests` task.
+buildfile (i.e. `Rakefile`). It is not strictly necessary to compile and run the programs or run the unit tests. 
+
+[JRuby](http://jruby.org) and its Rake implementation will work for the default task to compile the programs, but will not work for the `:tests` task.
 
 ##### Build
 
 To build programs (in top level directory):
 
-`rake`
+> `rake`
 
 [or run `ant` in *cli* and *gui* directories, respectively].
 
 To test run the command line program:
 
-`rake test`
+> `rake test`
 
 To run the unit tests:
 
-`rake unittests`
+> `rake unittests`
 
 [or run `ant unittest` in *cli* and *gui*, respectively].
