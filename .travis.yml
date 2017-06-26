@@ -10,7 +10,6 @@ before_install:
   - sudo gem install os
   - ruby --version
   - rake --version
-  - java -version
   - ant -version
 
 script:
