@@ -21,7 +21,7 @@ end
 
 task :cli do
     Dir.chdir("cli")
-    puts "Buidling CLI implementation..."
+    puts "Building CLI implementation..."
     sh "#{ant}"
     Dir.chdir("..")
 end
