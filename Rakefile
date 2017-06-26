@@ -38,3 +38,7 @@ task :test do
     puts ""
     ruby "#{advancedtest}"
 end
+
+task :unittests do
+    puts "!TODO"
+end
