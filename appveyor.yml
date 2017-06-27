@@ -1,5 +1,6 @@
 install:
   - choco install ant
+  - choco install ivy
   - SET PATH=C:\Ruby22\bin;%PATH%
   - ps: refreshenv
   - gem install os
