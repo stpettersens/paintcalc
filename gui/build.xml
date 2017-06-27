@@ -11,9 +11,15 @@
         <mkdir dir="${build.dir}"/>
         <javac includeantruntime="false" srcdir="${src.dir}" destdir="${build.dir}"/>
     </target>
+    
     <target name="package" depends="compile">
         <jar manifest="${manifest}" destfile="${jar}">
             <fileset dir="${build.dir}"/>
         </jar>
+    </target>
+    
+    <target name="clean">
+        <delete file="paintcalc.jar"/>
+        <delete dir="ant_build"/>
     </target>
 </project>

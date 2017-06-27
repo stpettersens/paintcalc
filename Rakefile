@@ -1,15 +1,14 @@
 require 'os'
-require 'fileutils'
 
 ant = "ant"
-simpletest = "test/simple.rb"
-advancedtest = "test/advanced.rb"
+simpletestrb = "test/simple.rb"
+advancedtestrb = "test/advanced.rb"
 
 if OS.windows? then
     if !ENV['CI'] then
         ant = "cmd /c ant.bat"
-        simpletest = "test\\simple.rb"
-        advancedtest = "test\\advanced.rb"
+        simpletestrb = "test\\simple.rb"
+        advancedtestrb = "test\\advanced.rb"
     end
 end
 
@@ -18,7 +17,7 @@ task :default => [:cli] do
     Dir.chdir("gui")
     puts "Building GUI implementation..."
     sh "#{ant}"
-    Dir.chdir("..")
+    puts ""
 end
 
 task :cli do
@@ -28,19 +27,26 @@ task :cli do
     Dir.chdir("..")
 end
 
+task :dependencies do
+    Dir.chdir("cli")
+    sh "#{ant} resolve"
+end
+
 task :clean do
-    FileUtils.rm_r("cli/ant_build")
-    File.delete("cli/paintcalc.jar")
-    FileUtils.rm_r("gui/ant_build")
-    File.delete("gui/paintcalc.jar")
+    Dir.chdir("cli")
+    sh "#{ant} clean"
+    Dir.chdir("..")
+    Dir.chdir("gui")
+    sh "#{ant} clean"
 end
 
 task :test do
-    ruby "#{simpletest}"
+    ruby "#{simpletestrb}" # <> {simpletestio}
     puts ""
-    ruby "#{advancedtest}"
+    ruby "#{advancedtestrb}" # <> {advancedtestio}
 end
 
 task :unittests do
-    puts "!TODO"
+    Dir.chdir("cli")
+    sh "#{ant} unittest"
 end

@@ -12,6 +12,9 @@ before_install:
   - rake --version
   - ant -version
 
+before_script:
+  - rake dependencies
+
 script:
   - rake
   - rake test
