@@ -6,6 +6,9 @@ notifications:
 language: java
 
 before_install:
+  - wget http://www-eu.apache.org/dist//ant/ivy/2.4.0/apache-ivy-2.4.0-bin.tar.gz
+  - tar xvfz apache-ivy-2.4.0-bin.tar.gz
+  - ls -la
   - sudo apt-get install -y rubygems
   - sudo gem install os
   - ruby --version
