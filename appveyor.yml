@@ -1,6 +1,6 @@
 install:
   - choco install ant
-  - ps: File-Download 'http://www-us.apache.org/dist//ant/ivy/2.4.0/apache-ivy-2.4.0-bin.zip'
+  - ps: Start-FileDownload 'http://www-us.apache.org/dist//ant/ivy/2.4.0/apache-ivy-2.4.0-bin.zip'
   - 7z x apache-ivy-2.4.0-bin.zip
   - cd apache-ivy-2.4.0
   - copy ivy-2.4.0.jar C:\Users\appveyor\.ant\lib
