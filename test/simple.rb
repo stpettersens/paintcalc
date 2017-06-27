@@ -2,7 +2,7 @@ require 'open3'
 require 'os'
 
 if OS.java? then
-    puts "Please do not use JRuby for this."
+    puts "JRuby is not supported."
     exit 1
 end
 

@@ -1,4 +1,10 @@
 require 'open3'
+require 'os'
+
+if OS.java? then
+    puts "JRuby is not supported."
+    exit 1
+end
 
 Dir.chdir("cli")
 puts "Invoking java -jar paintcalc.jar -a"
