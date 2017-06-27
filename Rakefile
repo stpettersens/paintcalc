@@ -16,7 +16,7 @@ end
 task :default => [:cli] do
     puts ""
     Dir.chdir("gui")
-    puts "Building GUI implentation..."
+    puts "Building GUI implementation..."
     sh "#{ant}"
     Dir.chdir("..")
 end
