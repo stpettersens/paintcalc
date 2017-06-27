@@ -10,6 +10,7 @@ before_install:
   - tar xvfz apache-ivy-2.4.0-bin.tar.gz
   - cd apache-ivy-2.4.0
   - sudo cp ivy-2.4.0.jar /usr/share/ant/lib
+  - cd ..
   - sudo apt-get install -y rubygems
   - sudo gem install os
   - ruby --version
