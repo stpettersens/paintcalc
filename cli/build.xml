@@ -3,8 +3,13 @@
     <target name="init">
         <property name="src.dir" location="${basedir}/src/io/stpettersens/paintcalc"/>
         <property name="build.dir" location="${basedir}/ant_build"/>
+        <property name="junit" location="${basedir}/lib/junit-4.12.jar"/>
         <property name="jar" location="${basedir}/paintcalc.jar"/>
         <property name="manifest" location="${basedir}/Manifest.mf"/>
+
+        <path id="cp">
+            <pathelement location="${junit}"/>
+        </path>
     </target>
 
     <target name="resolve" depends="init">
@@ -13,7 +18,8 @@
 
     <target name="compile" depends="init">
         <mkdir dir="${build.dir}"/>
-        <javac includeantruntime="false" srcdir="${src.dir}" destdir="${build.dir}"/>
+        <javac includeantruntime="false" classpath="${toString:cp}"
+        srcdir="${src.dir}" destdir="${build.dir}"/>
     </target>
 
     <target name="package" depends="compile">
@@ -29,5 +35,6 @@
     <target name="clean">
         <delete file="paintcalc.jar"/>
         <delete dir="ant_build"/>
+        <delete dir="lib"/>
     </target>
 </project>
