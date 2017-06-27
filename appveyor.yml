@@ -1,0 +1,12 @@
+install:
+  - gem install os
+  - ruby --version
+  - rake --version
+  - java -version
+  - ant -version
+
+test_script:
+  - rake
+  - rake test
+
+build: off
