@@ -1,5 +1,8 @@
 install:
   - gem install os
+  - choco install ant
+  - SET PATH=C:\Ruby22\bin;%PATH%
+  - ps: refreshenv
   - ruby --version
   - rake --version
   - java -version
