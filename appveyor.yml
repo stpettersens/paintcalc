@@ -1,6 +1,10 @@
 install:
   - choco install ant
-  - choco install ivy
+  - ps: File-Download 'http://www-us.apache.org/dist//ant/ivy/2.4.0/apache-ivy-2.4.0-bin.zip'
+  - 7z x apache-ivy-2.4.0-bin.zip
+  - cd apache-ivy-2.4.0
+  - copy ivy-2.4.0.jar C:\Users\appveyor\.ant\lib
+  - cd ..
   - SET PATH=C:\Ruby22\bin;%PATH%
   - ps: refreshenv
   - gem install os
