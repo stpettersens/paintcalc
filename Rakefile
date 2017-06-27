@@ -5,7 +5,7 @@ ant = "ant"
 simpletest = "test/simple.rb"
 advancedtest = "test/advanced.rb"
 
-if OS.windows? then
+if OS.windows? and !ENV['CI'] then
     ant = "cmd /c ant.bat"
     simpletest = "test\\simple.rb"
     advancedtest = "test\\advanced.rb"
