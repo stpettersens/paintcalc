@@ -11,7 +11,7 @@
 The following tools are required to build the programs. Please note these versions are known to work, earlier versions might work too.
 
 * [Java Development Kit](http://java.sun.com) 1.8+
-* [Ant](https://ant.apache.org) 1.8+
+* [Ant](https://ant.apache.org) 1.8+ with [Ivy](https://ant.apache.org/ivy) 2.4+
 * [Ruby](https://www.ruby-lang.org/en) 2.2+ and [Rake](https://ruby.github.io/rake) 10+
 
 Ruby is required to run the `:test` task in the top level
@@ -21,17 +21,23 @@ buildfile (i.e. `Rakefile`). It is not strictly necessary to compile and run the
 
 ##### Build
 
-To build programs (in top level directory):
+* First, install the dependencies (i.e. [JUnit 4](http://junit.org/junit4)) in top level directory:
+
+> `rake dependencies`
+
+[or run `ant resolve` in *cli* directory].
+
+* To build programs (in top level directory):
 
 > `rake`
 
 [or run `ant` in *cli* and *gui* directories, respectively].
 
-To test run the command line program:
+* To test run the command line program with sample inputs:
 
 > `rake test`
 
-To run the unit tests:
+* To run the unit tests:
 
 > `rake unittests`
 
