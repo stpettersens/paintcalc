@@ -4,6 +4,7 @@
         <property name="src.dir" location="${basedir}/src/io/stpettersens/paintcalc"/>
         <property name="build.dir" location="${basedir}/ant_build"/>
         <property name="junit" location="${basedir}/lib/junit-4.12.jar"/>
+        <property name="hamcrest" location="${basedir}/lib/hamcrest-core-1.3.jar"/>
         <property name="jar" location="${basedir}/paintcalc.jar"/>
         <property name="manifest" location="${basedir}/Manifest.mf"/>
 
@@ -28,8 +29,16 @@
         </jar>
     </target>
 
-    <target name="unittest">
-        <!-- !TODO -->
+    <target name="unittest" depends="compile">
+        <junit printsummary="yes" haltonfailure="yes">
+            <classpath location="${junit}"/>
+            <classpath location="${hamcrest}"/>
+            <classpath location="${build.dir}"/>
+            <test name="io.stpettersens.paintcalc.PaintCalcTest"
+            haltonfailure="no" outfile="result">
+                <formatter type="plain"/>
+            </test>
+        </junit>
     </target>
 
     <target name="clean">

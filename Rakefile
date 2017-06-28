@@ -44,9 +44,16 @@ task :test do
     ruby "#{simpletestrb}" # <> {simpletestio}
     puts ""
     ruby "#{advancedtestrb}" # <> {advancedtestio}
+    puts ""
 end
 
-task :unittests do
+task :unittest do
     Dir.chdir("cli")
     sh "#{ant} unittest"
+    puts ""
+    if OS.windows? then
+        sh "type result.txt"
+    else
+        sh "cat result.txt"
+    end
 end

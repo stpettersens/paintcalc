@@ -44,7 +44,7 @@ class PaintCalc {
         return in.next();
     }
 
-    static void calculatePaintNeeded(float squareMPerLitre, Room room, int coats) {
+    static float calculatePaintNeeded(float squareMPerLitre, Room room, int coats) {
         float requiredPaint = (room.getFlSquareMetres() * 1.0f) / squareMPerLitre;
         requiredPaint = requiredPaint * coats;
         String sopl = new String();
@@ -64,7 +64,7 @@ class PaintCalc {
         System.out.println(String.format(
         "Coverage is %3.1f square metres per litre and %d coat%s applied.",
         squareMPerLitre, coats, sopc));
-        System.exit(0);
+        return requiredPaint;
     }
 
     static void displayUsage(String program) {

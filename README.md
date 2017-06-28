@@ -15,13 +15,14 @@ The following tools are required to build the programs. Please note these versio
 * [Ruby](https://www.ruby-lang.org/en) 2.2+ and [Rake](https://ruby.github.io/rake) 10+
 
 Ruby is required to run the `:test` task in the top level
-buildfile (i.e. `Rakefile`). It is not strictly necessary to compile and run the programs or run the unit tests. 
+buildfile (i.e. `Rakefile`). It is not strictly necessary to compile and run the programs or run the unit test. 
 
 [JRuby](http://jruby.org) and its Rake implementation will work for the default task to compile the programs, but will not work for the `:test` task.
 
 ##### Build
 
-* First, install the dependencies (i.e. [JUnit 4](http://junit.org/junit4)) in top level directory:
+* First, install the dependencies (i.e. [JUnit 4](http://junit.org/junit4) 
+in top level directory:
 
 > `rake dependencies`
 
@@ -39,6 +40,6 @@ buildfile (i.e. `Rakefile`). It is not strictly necessary to compile and run the
 
 * To run the unit tests:
 
-> `rake unittests`
+> `rake unittest`
 
 [or run `ant unittest` in *cli* and *gui*, respectively].
