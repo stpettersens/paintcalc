@@ -21,7 +21,7 @@ buildfile (i.e. `Rakefile`). It is not strictly necessary to compile and run the
 
 ##### Build
 
-* First, install the dependencies (i.e. [JUnit 4](http://junit.org/junit4) 
+* First, install the dependencies (i.e. [JUnit 4](http://junit.org/junit4))
 in top level directory:
 
 > `rake dependencies`
