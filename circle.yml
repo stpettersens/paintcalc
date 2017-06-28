@@ -1,0 +1,11 @@
+machine:
+  ruby:
+    version: 2.4
+
+dependencies:
+  override:
+    - gem install os
+    - ruby --version
+    - rake --version
+    - java -version
+    - ant -version
