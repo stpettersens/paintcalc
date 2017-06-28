@@ -3,5 +3,5 @@ machine:
     version: 2.4
 
 test:
-  post:
-    - echo do something f
+override:
+  - echo do something ffs
