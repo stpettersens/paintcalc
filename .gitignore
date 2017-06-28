@@ -1,3 +1,4 @@
+doc/
 *.class
 *-javadoc.jar
 *-sources.jar

@@ -10,6 +10,7 @@ before_test:
   - rake
 
 test_script:
+  - rake doc
   - rake test
   - rake unittest
 

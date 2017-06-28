@@ -43,3 +43,9 @@ in top level directory:
 > `rake unittest`
 
 [or run `ant unittest` in *cli* and *gui*, respectively].
+
+* To generate documentation:
+
+> `rake doc`
+
+[or run `ant doc` in *cli* directory].

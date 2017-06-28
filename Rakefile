@@ -54,3 +54,8 @@ task :unittest do
         sh "cat result.txt"
     end
 end
+
+task :doc do
+    Dir.chdir("cli")
+    sh "#{ant} doc"
+end

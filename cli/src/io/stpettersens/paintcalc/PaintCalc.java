@@ -8,43 +8,28 @@
 package io.stpettersens.paintcalc;
 import java.util.Scanner;
 
-class Room {
-    
-    private float width;
-    private float length;
-    private float height;
+public class PaintCalc {
 
-    Room(float width, float length, float height) {
-        this.width = width;
-        this.length = length;
-        this.height = height;
-    }
-    public float getWidth() {
-        return width;
-    }
-    public float getLength() {
-        return length;
-    }
-    public float getHeight() {
-        return height;
-    }
-    public float getFlSquareMetres() {
-        return width * height;
-    }
-    public float getVolCubicMetres() {
-        return width * length * height;
-    }
-}
-
-class PaintCalc {
-
-    static String getInput(String prompt) {
+    /**
+     * Get input from user.
+     * @param prompt String for the prompt.
+     * @return The input received from the user.
+    */
+    public static String getInput(String prompt) {
         System.out.println(String.format("%s?", prompt));
         Scanner in = new Scanner(System.in);
         return in.next();
     }
 
-    static float calculatePaintNeeded(float squareMPerLitre, Room room, int coats) {
+    /** 
+     * Calculate the amount of paint in litres needed to decorate a room.
+     * Also display the area and volume of the room.
+     * @param squareMPerLitre Litres of paint required to cover 1 square metre.
+     * @param room The room to cover for calculation.
+     * @param coats The number of coats of paint to apply.
+     * @return The amount of paint required to decorate the room in litres.
+    */
+    public static float calculatePaintNeeded(float squareMPerLitre, Room room, int coats) {
         float requiredPaint = (room.getFlSquareMetres() * 1.0f) / squareMPerLitre;
         requiredPaint = requiredPaint * coats;
         String sopl = new String();
@@ -67,7 +52,11 @@ class PaintCalc {
         return requiredPaint;
     }
 
-    static void displayUsage(String program) {
+    /**
+     * Display program command line usage and exit.
+     * @param program The executable name of the program.
+    */
+    public static void displayUsage(String program) {
         System.out.println("Utility to calculate the volume of paint needed to");
         System.out.println("paint a room of supplied dimensions.");
         System.out.println(String.format("\nUsage: %s [options]", program));
@@ -77,6 +66,10 @@ class PaintCalc {
         System.exit(0);
     }
 
+    /**
+     * Entry method for the program.
+     * @param args Command line arguments. Only -h and -a are used.
+    */
     public static void main(String[] args) {
         float squareMPerLitre = 10.0f;
         int coats = 1;
@@ -96,7 +89,7 @@ class PaintCalc {
         float length = Float.parseFloat(getInput("Room length (m)"));
         float height = Float.parseFloat(getInput("Room height (m)"));
         Room room = new Room(width, length, height);
-        if(advanced) {
+        if(advanced) { // Further options, when -a switch is provided.
             squareMPerLitre = Float.parseFloat(getInput("Paint coverage in square metres per litre"));
             coats = Integer.parseInt(getInput("How many coats"));
         }
