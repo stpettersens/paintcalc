@@ -19,6 +19,7 @@ before_install:
 
 before_script:
   - rake dependencies
+  - ls cli/lib
 
 script:
   - rake
