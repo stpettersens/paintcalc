@@ -2,16 +2,16 @@ machine:
   ruby:
     version: 2.4
 
-dependencies:
-  override:
-    - gem install os
-    - ruby --version
-    - rake --version
-    - java -version
-    - ant -version
+#dependencies:
+  #override:
+    #- gem install os
+    #- ruby --version
+    #- rake --version
+    #- java -version
+    #- ant -version
 
-test:
-  override:
-    - rake
-    - rake test
-    - rake unittest
+#test:
+  #override:
+    #- rake
+    #- rake test
+    #- rake unittest
