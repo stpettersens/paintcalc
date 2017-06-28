@@ -1,4 +1,5 @@
-lib/
 *.class
-*.jar
+*-javadoc.jar
+*-sources.jar
+paintcalc.jar
 result.txt
