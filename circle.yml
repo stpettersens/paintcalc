@@ -9,3 +9,9 @@ dependencies:
     - rake --version
     - java -version
     - ant -version
+
+test:
+  override:
+    - rake
+    - rake test
+    - rake unittest
