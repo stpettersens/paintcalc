@@ -1,1 +1,2 @@
 Main-Class: io.stpettersens.paintcalc.PaintCalc
+Class-Path: lib/junit-4.12.jar
