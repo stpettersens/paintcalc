@@ -1,6 +1,7 @@
 ### paintcalc
 > Utility to calculate the volume of paint needed to paint a room of supplied dimensions.
-<!---->
+
+[ ![Codeship Status for stpettersens/paintcalc](https://app.codeship.com/projects/e0f9b940-3e5a-0135-c15c-5a70b28fe525/status?branch=master)](https://app.codeship.com/projects/229482)
 [![Build status](https://ci.appveyor.com/api/projects/status/l1claxd9mrq3onaa?svg=true)](https://ci.appveyor.com/project/stpettersens/paintcalc)
 
 #### Building from source
