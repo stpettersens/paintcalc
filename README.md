@@ -11,7 +11,7 @@
 The following tools are required to build the programs. Please note these versions are known to work, earlier versions might work too.
 
 * [Java Development Kit](http://java.sun.com) 1.8+
-* [Ant](https://ant.apache.org) 1.8+ with [Ivy](https://ant.apache.org/ivy) 2.4+
+* [Ant](https://ant.apache.org) 1.9+ with [Ivy](https://ant.apache.org/ivy) 2.4+
 * [Ruby](https://www.ruby-lang.org/en) 2.2+ and [Rake](https://ruby.github.io/rake) 10+
 
 Ruby is required to run the `:test` task in the top level

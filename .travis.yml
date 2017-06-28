@@ -8,8 +8,9 @@ language: java
 before_install:
   - wget http://www-eu.apache.org/dist//ant/ivy/2.4.0/apache-ivy-2.4.0-bin.tar.gz
   - tar xvfz apache-ivy-2.4.0-bin.tar.gz
-  - sudo apt-get -qq update
-  - sudo apt-get install ant
+  - wget http://apache.mirrors.nublue.co.uk//ant/binaries/apache-ant-1.10.1-bin.tar.gz
+  - sudo tar xvfz apache-ant-1.10.1-bin.tar.gz -C /opt
+  - sudo ln -s /opt/apache-ant-1.10.1/bin/ant /usr/bin/ant
   - cd apache-ivy-2.4.0
   - sudo cp ivy-2.4.0.jar /usr/share/ant/lib
   - cd ..
