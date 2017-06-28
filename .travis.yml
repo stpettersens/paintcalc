@@ -6,6 +6,8 @@ notifications:
 language: java
 
 before_install:
+  - mkdir /home/travis/.ant/lib
+  - cp cli/lib/*.jar /home/travis/.ant/lib
   - sudo apt-get install -y rubygems
   - sudo gem install os
   - ruby --version
