@@ -3,5 +3,5 @@ machine:
     version: 2.4
 
 test:
-override:
-  - echo do something ffs
+  override:
+    - echo do something ffs
