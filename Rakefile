@@ -15,14 +15,12 @@ end
 task :default => [:cli] do
     puts ""
     Dir.chdir("gui")
-    puts "Building GUI implementation..."
     sh "#{ant}"
     puts ""
 end
 
 task :cli do
     Dir.chdir("cli")
-    puts "Building CLI implementation..."
     sh "#{ant}"
     Dir.chdir("..")
 end
@@ -44,7 +42,6 @@ task :test do
     ruby "#{simpletestrb}" # <> {simpletestio}
     puts ""
     ruby "#{advancedtestrb}" # <> {advancedtestio}
-    puts ""
 end
 
 task :unittest do

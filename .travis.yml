@@ -19,6 +19,8 @@ before_install:
 
 before_script:
   - rake dependencies
+  - sudo cp cli/lib/hamcrest-core-1.3.jar /usr/share/ant/lib
+  - sudo cp cli/lib/junit-4.12.jar /usr/share/ant/lib
 
 script:
   - rake
