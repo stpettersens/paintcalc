@@ -1,5 +1,5 @@
 doc/
-bundledjre/
+*.exe
 *.class
 *-javadoc.jar
 *-sources.jar
