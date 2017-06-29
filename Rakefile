@@ -38,6 +38,14 @@ task :clean do
     sh "#{ant} clean"
 end
 
+task :cleanall do
+    Dir.chdir("cli")
+    sh "#{ant} cleanall"
+    Dir.chdir("..")
+    Dir.chdir("gui")
+    sh "#{ant} cleanall"
+end
+
 task :test do
     ruby "#{simpletestrb}" # <> {simpletestio}
     puts ""
@@ -58,4 +66,12 @@ end
 task :doc do
     Dir.chdir("cli")
     sh "#{ant} doc"
+end
+
+task :upx do
+    Dir.chdir("cli")
+    sh "#{ant} upx"
+    Dir.chdir("..")
+    Dir.chdir("gui")
+    sh "#{ant} upx"
 end

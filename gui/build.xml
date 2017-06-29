@@ -5,6 +5,9 @@
         <property name="build.dir" location="${basedir}/ant_build"/>
         <property name="jar" location="${basedir}/paintcalc.jar"/>
         <property name="manifest" location="${basedir}/Manifest.mf"/>
+        <property name="manifest_exe" location="${basedir}/paintcalcgui_exe.xml"/>
+        <property name="l4j_exe" location="${basedir}/_paintcalcgui.exe"/>
+        <property name="upx_exe" location="${basedir}/paintcalcgui.exe"/>
     </target>
     
     <target name="compile" depends="init">
@@ -18,8 +21,28 @@
         </jar>
     </target>
     
-    <target name="clean">
-        <delete file="paintcalc.jar"/>
-        <delete dir="ant_build"/>
+    <target name="clean" depends="init">
+        <delete file="${jar}"/>
+        <delete dir="${build.dir}"/>
+    </target>
+
+    <target name="cleanall" depends="clean">
+        <delete file="${upx_exe}"/>
+    </target>
+
+    <target name="exe" depends="init">
+        <exec executable="launch4jc">
+            <arg value="${manifest_exe}"/>
+        </exec>
+    </target>
+
+    <target name="upx" depends="exe">
+        <exec executable="upx">
+            <arg value="-9"/>
+            <arg value="${l4j_exe}"/>
+            <arg value="-o"/>
+            <arg value="${upx_exe}"/>
+        </exec>
+        <delete file="${l4j_exe}"/>
     </target>
 </project>

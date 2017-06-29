@@ -3,7 +3,7 @@
   <dontWrapJar>false</dontWrapJar>
   <headerType>console</headerType>
   <jar>paintcalc.jar</jar>
-  <outfile>paintcalc.exe</outfile>
+  <outfile>_paintcalc.exe</outfile>
   <errTitle>JRE required</errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>
