@@ -12,7 +12,7 @@ The following tools are required to build the programs. Please note these versio
 
 * [Java Development Kit](http://java.sun.com) 1.8+
 * [Ant](https://ant.apache.org) 1.9+ with [Ivy](https://ant.apache.org/ivy) 2.4+
-* [Ruby](https://www.ruby-lang.org/en) 2.2+ and [Rake](https://ruby.github.io/rake) 10+, os gem.
+* [Ruby](https://www.ruby-lang.org/en) 2.2+ and [Rake](https://ruby.github.io/rake) 10+ with os gem.
 
 Ruby is required to run the `:test` task in the top level
 buildfile (i.e. `Rakefile`). It is not strictly necessary to compile and run the programs or run the unit test. 
